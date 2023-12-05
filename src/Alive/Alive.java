@@ -3,7 +3,7 @@ package Alive;
 import Interfaces.BelongingToThis;
 import Interfaces.Move;
 import Interfaces.ThisBelonging;
-import enums.Actions;
+import Enums.Actions;
 
 public abstract class Alive implements ThisBelonging<Object>, BelongingToThis<Object>, Move {
     private String belongingto= "Нечейное" ;

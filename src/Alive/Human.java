@@ -1,7 +1,7 @@
 package Alive;
 
 import Other.City;
-import enums.Mood;
+import Enums.Mood;
 
 public class Human extends Alive  {
     private Mood mood;

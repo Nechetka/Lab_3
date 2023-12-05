@@ -1,7 +1,7 @@
 package Things;
 
 import Interfaces.Move;
-import enums.Prices;
+import Enums.Prices;
 
 public class Car extends Thing implements Move {
     private final String engine;

@@ -2,7 +2,7 @@ package Things;
 
 import Alive.Alive;
 import Interfaces.ThisBelonging;
-import enums.Prices;
+import Enums.Prices;
 
 public abstract class Thing implements ThisBelonging<Object>{
     private final Prices price;

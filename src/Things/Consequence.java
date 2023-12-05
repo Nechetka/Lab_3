@@ -1,6 +1,6 @@
 package Things;
 
-import enums.Prices;
+import Enums.Prices;
 
 public class Consequence extends Thing {
     public Consequence(Prices price) {
