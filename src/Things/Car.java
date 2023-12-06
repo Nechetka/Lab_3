@@ -1,5 +1,6 @@
 package Things;
 
+import Alive.Alive;
 import Interfaces.Move;
 import Enums.Prices;
 
@@ -13,7 +14,7 @@ public class Car extends Thing implements Move {
     public String getEngine() {
         return engine;
     }
-    public void setThisBelongTo (Object other){
+    public void setThisBelongTo (Alive other){
         super.setThisBelongTo(this.toString() + " принадлежит кому: " + other);
     }
 

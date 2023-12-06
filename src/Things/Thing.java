@@ -20,7 +20,10 @@ public abstract class Thing implements ThisBelonging<Object>{
 
     private String belonging= "Нечейное" ;
     public void setThisBelongTo (Object other){
-        belonging = this.getName() + " принадлежит кому: " + other;
+        belonging = this.getName() + " принадлежит чему: " + other;
+    }
+    protected void setThisBelongTo (String other){
+        belonging = other;
     }
     public void setThisBelongTo (Alive other){
         belonging = this.getName() + " принадлежит кому: " + other.getName();
