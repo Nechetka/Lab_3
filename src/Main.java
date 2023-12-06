@@ -41,6 +41,5 @@ public class Main {
         fullText.addText("И "+Skuper.doAction(Actions.TALK, onecase,true)+" (в будущем)" );
 
         System.out.println(fullText.showOlyFullText());
-
     }
 }
