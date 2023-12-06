@@ -20,14 +20,30 @@ public abstract class Alive implements ThisBelonging<Object>, BelongingToThis<Ob
     }
     public abstract void say(String x);
 
-    public String doAction(Actions action){
-        return this.toString()+" выполняет действие "+action.getAction();
+    public String doAction(Actions action, boolean noDo){
+        if (noDo==true){
+            return this.toString()+" выполняет действие "+action.getAction();
+        }
+        else{
+            return this.toString()+" не выполняет действие "+action.getAction();
+        }
     }
-    public String doAction(Actions action, Object thing){
-        return this.toString()+" выполняет действие "+action.getAction()+ " над " + thing.toString();
+    public String doAction(Actions action, Object thing, boolean noDo){
+        if (noDo==true){
+            return this.toString()+" выполняет действие "+action.getAction()+ " над " + thing.toString();
+        }
+        else {
+            return this.toString()+" не выполняет действие "+action.getAction()+ " над " + thing.toString();
+        }
     }
-    public String  doAction(Actions action,Alive obj){
-       return this.toString()+" выполняет действие "+action.getAction()+ " над " + obj.getName();
+    public String  doAction(Actions action,Alive obj, boolean noDo){
+        if (noDo==true){
+            return this.toString()+" выполняет действие "+action.getAction()+ " над " + obj.getName();
+        }
+        else{
+            return this.toString()+" не выполняет действие "+action.getAction()+ " над " + obj.getName();
+        }
+
     }
     @Override
     public String moveFromTo(String from, String to) {

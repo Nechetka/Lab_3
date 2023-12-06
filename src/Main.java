@@ -26,19 +26,19 @@ public class Main {
         var car = new Car(Prices.LUXURIOUS,"восьмицилиндровый");
         car.setThisBelongTo(Krabs);
         var onecase = new Case(Prices.PROFITABLE);
-        var fullText = new Message("MP","IFR");
+        var fullText = new Message("MP","KAA");
 
-        Letter.addText("Надо сделать: " +someone2.doAction(Actions.KILL, Goats));
-        Letter.addText(Skuper.getHometown()+" "+Skuper.getJob()+" "+Skuper.doAction(Actions.RIDE)+" в "+city);
+        Letter.addText("Надо сделать: " +someone2.doAction(Actions.KILL, Goats, true));
+        Letter.addText(Skuper.getHometown()+" "+Skuper.getJob()+" "+Skuper.doAction(Actions.RIDE,true)+" в "+city);
         Letter.addText("НЕ "+Posl.getThisBelongTo());
         fullText.addText(Letter.showFullLetter());
-        fullText.addText(Skuper.doAction(Actions.WEAR, cilinder) + ". "+ cilinder.getThisBelongTo());
-        fullText.addText("Через 5 минут "+They.doAction(Actions.RIDE,car));
+        fullText.addText(Skuper.doAction(Actions.WEAR, cilinder,true) + ". "+ cilinder.getThisBelongTo());
+        fullText.addText("Через 5 минут "+They.doAction(Actions.RIDE,car,true));
         fullText.addText(car.getThisBelongTo());
         fullText.addText(Skuper.getMood()); ;
-        fullText.addText(Skuper.doAction(Actions.JOY)+" так как "+Prices.FREE.getPrices()+" "+Skuper.doAction(Actions.RIDE, car));
-        fullText.addText("И "+ Prices.FREE.getPrices()+" "+Skuper.doAction(Actions.EAT) +" (в будущем)" );
-        fullText.addText("И "+Skuper.doAction(Actions.TALK, onecase)+" (в будущем)" );
+        fullText.addText(Skuper.doAction(Actions.JOY,true)+" так как "+Prices.FREE.getPrices()+" "+Skuper.doAction(Actions.RIDE, car,true));
+        fullText.addText("И "+ Prices.FREE.getPrices()+" "+Skuper.doAction(Actions.EAT,true) +" (в будущем)" );
+        fullText.addText("И "+Skuper.doAction(Actions.TALK, onecase,true)+" (в будущем)" );
 
         System.out.println(fullText.showOlyFullText());
 
